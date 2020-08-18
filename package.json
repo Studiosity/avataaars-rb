@@ -1,6 +1,6 @@
 {
   "name": "avataaars-rb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ruby wrapper library to call to avataaars React component using NodeJS",
   "repository": {
     "type": "git",
