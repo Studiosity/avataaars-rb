@@ -44,6 +44,11 @@ avatar = Avataaars.new(
 avatar = Avataaars.new(root_path: 'some/other/path').create_avatar 
 ```
 
+## Yeah, but why not just write it all in Ruby
+:confused: This was considered but was more of a maintenance issue. Given the assets/React component haven't
+seen much in the way of changes I may re-write the gem at some time to just implement the avatar creation.
+Upside would be a pretty massive speed boost as calling out to NodeJS like this isn't super performant.  
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
