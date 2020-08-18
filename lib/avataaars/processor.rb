@@ -15,8 +15,6 @@ class Avataaars
     end
 
     def create_avatar(options)
-      puts "O: #{options}"
-
       spawn_process
       ensure_packages_are_initiated
       call_js_method options

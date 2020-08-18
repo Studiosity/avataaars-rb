@@ -6,6 +6,18 @@ class Avataaars
   #
   class Utils
     #
+    # Removes leading/trailing whitespaces and squishes inner whitespace with a single space
+    #
+    # N.B. whitespace includes all 'blank' characters as well as newlines/carriage returns etc.
+    #
+    def self.squish(string)
+      string
+        .gsub(/\A[[:space:]]+/, '')
+        .gsub(/[[:space:]]+\z/, '')
+        .gsub(/[[:space:]]+/, ' ')
+    end
+
+    #
     # Deep transform the keys in an object (Hash/Array)
     #
     # Copied from active support

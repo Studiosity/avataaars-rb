@@ -22,5 +22,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ['lib']
 
+  spec.add_development_dependency 'mini_magick', '~> 4.10'
+  spec.add_development_dependency 'rspec', '~> 3.9'
   spec.add_development_dependency 'rubocop', '~> 0.86'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.41'
 end
