@@ -1,0 +1,21 @@
+{
+  "name": "avataaars-rb",
+  "version": "0.0.1",
+  "description": "Ruby wrapper library to call to avataaars React component using NodeJS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Studiosity/avataaars-rb.git"
+  },
+  "keywords": [],
+  "author": "abromwich@studiosity.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Studiosity/avataaars/issues"
+  },
+  "homepage": "https://github.com/Studiosity/avataaars#readme",
+  "devDependencies": {
+    "avataaars": "^1.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
