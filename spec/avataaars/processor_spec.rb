@@ -9,7 +9,7 @@ describe Avataaars::Processor do
     subject(:create_avatar) { processor.create_avatar options }
 
     let(:options) { {} }
-    let(:image) { MiniMagick::Image.read create_avatar }
+    let(:image) { MiniMagick::Image.read create_avatar, '.SVG' }
 
     it 'cleans up the worker process' do
       expect { create_avatar }.not_to(change { `ps | grep node | grep -v 'grep node' | wc -l` })

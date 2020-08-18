@@ -45,7 +45,7 @@ class Avataaars
       parse_package_error result[1]
     end
 
-    def parse_package_error(error_message) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    def parse_package_error(error_message) # rubocop:disable Metrics/MethodLength
       package_name = error_message[/^Error: Cannot find module '(.*)'$/, 1]
       raise Avataaars::Error, error_message unless package_name
 
@@ -73,7 +73,7 @@ class Avataaars
       @package_json ||= JSON.parse(File.read(package_json_path))
     end
 
-    def call_js_method(options) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    def call_js_method(options) # rubocop:disable Metrics/MethodLength
       stdin.puts JSON.dump([options])
       input = stdout.gets
       raise Errno::EPIPE, "Can't read from worker" if input.nil?
