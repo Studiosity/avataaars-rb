@@ -5,7 +5,7 @@ Kudos to [Pablo Stanley](https://twitter.com/pablostanley) for creating the asse
 [Fang-Pen Lin](https://twitter.com/fangpenlin) for the React component and
 the [Schmooze project](https://github.com/Shopify/schmooze) for which the Ruby<->NodeJS integration was based on.
 
-<p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
+<p align="center"><img src='avataaars-example.png?raw=true' /></p>
 
 ## Installation
 Add this line to your application's Gemfile:
