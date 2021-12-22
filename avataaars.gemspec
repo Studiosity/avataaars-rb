@@ -8,7 +8,7 @@ require 'avataaars/version'
 Gem::Specification.new do |spec|
   spec.name        = 'avataaars'
   spec.version     = Avataaars::VERSION
-  spec.required_ruby_version = ['>= 2.3.0', '< 2.8.0']
+  spec.required_ruby_version = ['>= 2.3.0', '< 3.1.0']
   spec.authors     = ['Andrew Bromwich']
   spec.email       = %w[abromwich@studiosity.com]
   spec.description = 'Ruby wrapper library to call to avataaars React component using NodeJS'
