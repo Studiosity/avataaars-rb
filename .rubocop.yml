@@ -1,3 +1,7 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.5
+
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 
@@ -115,4 +119,3 @@ Style/SlicingWithRange:
 
 Style/StringConcatenation:
   Enabled: true
-  
