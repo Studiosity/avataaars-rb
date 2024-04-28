@@ -14,7 +14,7 @@ class Avataaars
   # @param [Hash] options Optional parameters to pass to avatar processor
   #   see https://github.com/fangpenlin/avataaars
   #
-  def initialize(options = {})
+  def initialize(**options)
     @root_path = options.delete :root_path
     @options = options
   end
@@ -26,7 +26,7 @@ class Avataaars
   #
   def create_avatar
     normalised_options = Utils.normalize_object(@options)
-    processor.create_avatar normalised_options
+    processor.create_avatar(**normalised_options)
   end
 
   private

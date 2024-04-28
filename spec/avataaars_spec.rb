@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Avataaars do
-  let(:avataaars) { described_class.new(options) }
+  let(:avataaars) { described_class.new(**options) }
   let(:options) { {} }
 
   describe '.new' do
@@ -13,7 +13,7 @@ describe Avataaars do
     it { expect(new.instance_variable_get('@options')).to eq({}) }
 
     context 'with options passed' do
-      subject(:new) { described_class.new(options) }
+      subject(:new) { described_class.new(**options) }
 
       let(:options) { { avatar_style: 'Circle' } }
 
@@ -37,7 +37,7 @@ describe Avataaars do
     before { allow(Avataaars::Processor).to receive(:new).with(Dir.pwd).and_return processor }
 
     it 'calls to Avataaars::Processor' do
-      expect(processor).to receive(:create_avatar).with({}).and_return 'some SVG content'
+      expect(processor).to receive(:create_avatar).with(no_args).and_return 'some SVG content'
       expect(create_avatar).to eq 'some SVG content'
     end
 
@@ -46,7 +46,7 @@ describe Avataaars do
 
       it 'calls to Avataaars::Processor with overridden path' do
         expect(Avataaars::Processor).to receive(:new).with('foo/bar/baz').and_return processor
-        expect(processor).to receive(:create_avatar).with({}).and_return 'some SVG content'
+        expect(processor).to receive(:create_avatar).with(no_args).and_return 'some SVG content'
         expect(create_avatar).to eq 'some SVG content'
       end
     end
