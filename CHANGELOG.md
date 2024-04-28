@@ -3,6 +3,9 @@
 ## Unreleased
 - None
 
+## [0.2.2](releases/tag/v0.2.2) - 2024-04-28
+- Add support for Ruby 3.2 and 3.3 (#3)
+
 ## [0.2.1](releases/tag/v0.2.1) - 2022-08-19
 - Add Github actions in favour of Travis CI (#2)
 - Add support for Ruby 3.1 (#2)
