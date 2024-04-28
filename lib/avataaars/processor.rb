@@ -14,10 +14,10 @@ class Avataaars
       @app_root = app_root
     end
 
-    def create_avatar(options)
+    def create_avatar(**options)
       spawn_process
       ensure_packages_are_initiated
-      call_js_method options
+      call_js_method(**options)
     ensure
       cleanup_process if stdin
     end
@@ -73,7 +73,7 @@ class Avataaars
       @package_json ||= JSON.parse(File.read(package_json_path))
     end
 
-    def call_js_method(options) # rubocop:disable Metrics/MethodLength
+    def call_js_method(**options) # rubocop:disable Metrics/MethodLength
       stdin.puts JSON.dump([options])
       input = stdout.gets
       raise Errno::EPIPE, "Can't read from worker" if input.nil?

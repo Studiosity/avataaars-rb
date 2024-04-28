@@ -6,7 +6,7 @@ describe Avataaars::Processor do
   subject(:processor) { described_class.new Dir.pwd }
 
   describe '#create_avatar' do
-    subject(:create_avatar) { processor.create_avatar options }
+    subject(:create_avatar) { processor.create_avatar(**options) }
 
     let(:options) { {} }
     let(:image) { MiniMagick::Image.read create_avatar, '.SVG' }
