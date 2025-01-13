@@ -32,12 +32,12 @@ describe Avataaars do
   describe '#create_avatar' do
     subject(:create_avatar) { avataaars.create_avatar }
 
-    let(:processor) { instance_double 'Avataaars::Processor' }
+    let(:processor) { instance_double Avataaars::Processor }
 
     before { allow(Avataaars::Processor).to receive(:new).with(Dir.pwd).and_return processor }
 
     it 'calls to Avataaars::Processor' do
-      expect(processor).to receive(:create_avatar).with(no_args).and_return 'some SVG content'
+      allow(processor).to receive(:create_avatar).with(no_args).and_return 'some SVG content'
       expect(create_avatar).to eq 'some SVG content'
     end
 
@@ -45,8 +45,8 @@ describe Avataaars do
       let(:options) { { root_path: 'foo/bar/baz' } }
 
       it 'calls to Avataaars::Processor with overridden path' do
-        expect(Avataaars::Processor).to receive(:new).with('foo/bar/baz').and_return processor
-        expect(processor).to receive(:create_avatar).with(no_args).and_return 'some SVG content'
+        allow(Avataaars::Processor).to receive(:new).with('foo/bar/baz').and_return processor
+        allow(processor).to receive(:create_avatar).with(no_args).and_return 'some SVG content'
         expect(create_avatar).to eq 'some SVG content'
       end
     end
@@ -61,7 +61,7 @@ describe Avataaars do
       end
 
       it 'calls to Avataaars::Processor with normalized options' do
-        expect(processor).to(
+        allow(processor).to(
           receive(:create_avatar)
             .with(
               'avatarStyle' => 'Circle',
