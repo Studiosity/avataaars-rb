@@ -30,6 +30,9 @@ jobs:
       - name: Install Node dependencies
         run: npm install avataaars react react-dom
 
+      - name: Install ImageMagick
+        run: sudo apt install imagemagick
+
       - name: Lint code - Rubocop
         run: bundle exec rubocop
 
