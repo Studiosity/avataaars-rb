@@ -3,7 +3,7 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.2
 
 Layout/LineLength:
   Max: 120
