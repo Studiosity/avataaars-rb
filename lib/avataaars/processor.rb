@@ -14,10 +14,10 @@ class Avataaars
       @app_root = app_root
     end
 
-    def create_avatar(**options)
+    def create_avatar(**)
       spawn_process
       ensure_packages_are_initiated
-      call_js_method(**options)
+      call_js_method(**)
     ensure
       cleanup_process if stdin
     end
